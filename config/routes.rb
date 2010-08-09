@@ -1,8 +1,30 @@
 SampleApp::Application.routes.draw do |map|
-  get "pages/home"
-  get "pages/contact"
-  get "pages/about"
-  get "pages/help"
+  
+#  Page	     URL	        Named route    controller   action    
+#  --------  --------     -----------    ----------   --------
+#  Home	     /	          root_path      pages        home
+#  About	   /about	      about_path     pages        about
+#  Contact	 /contact	    contact_path   pages        contact
+#  Help	     /help	      help_path      pages        help
+#  Sign up	 /signup	    signup_path    
+#  Sign in	 /signin	    signin_path
+#
+#  note: helpers created are <>_path = /match_name
+#                            <>_url  = url/match_name
+  
+  
+  
+  match '/contact', :to => 'pages#contact'
+  match '/about',   :to => 'pages#about'
+  match '/help',    :to => 'pages#help'
+
+  root :to => "pages#home"
+
+  
+#  get "pages/home"
+#  get "pages/contact"
+#  get "pages/about"
+#  get "pages/help"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
