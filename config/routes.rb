@@ -11,7 +11,21 @@ SampleApp::Application.routes.draw do |map|
 #  Help	     /help	      help_path      pages        help
 #  Sign up	 /signup	    signup_path    
 #  Sign in	 /signin	    signin_path
-#
+
+
+#  HTTPr  URL           Action  Named route       Purpose
+#  -----  ------------  ------  ----------------  ---------------------------------
+#  GET    /users        index   users_path        page to list all users
+#  GET    /users/1      show    user_path(1)      page to show user with id 1
+#  GET    /users/new    new     new_user_path     page to make a new user (signup)
+#  POST   /users        create  users_path        create a new user
+#  GET    /users/1/edit edit    edit_user_path(1) page to edit user with id 1
+#  PUT    /users/1      update  user_path(1)      update user with id 1
+#  DELETE /users/1      destroy user_path(1)      delete user with id 1#
+
+
+
+
 #  note: helpers created are <>_path = /match_name
 #                            <>_url  = url/match_name
   
