@@ -24,4 +24,12 @@ RSpec.configure do |config|
   # examples within a transaction, comment the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+
+  # to test signout will need a sign_in fuction.
+  def test_sign_in(user)
+    controller.current_user = user
+  end
+
+
 end
